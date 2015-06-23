@@ -36,9 +36,9 @@ func main() {
 	app.Email = "james.newell@gmail.com"
 	app.Usage = "generates a cryptographically-secure random character string"
 	app.Flags = []cli.Flag{
-		cli.BoolFlag{"alphaNum, a", "use only alphaNumeric characters"},
-		cli.StringFlag{"filter, f", "no-filter", "valid character filter (regex format)"},
-		cli.BoolFlag{"pass, p", "use only password-friendly characters"},
+		cli.BoolFlag{Name: "alphaNum, a", Usage: "use only alphaNumeric characters"},
+		cli.StringFlag{Name: "filter, f", Value: "no-filter", Usage: "valid character filter (regex format)"},
+		cli.BoolFlag{Name: "pass, p", Usage: "use only password-friendly characters"},
 	}
 	cli.AppHelpTemplate = helpTemplate
 
