@@ -42,7 +42,7 @@ func main() {
 	}
 	cli.AppHelpTemplate = helpTemplate
 
-	app.Action = func(c *cli.Context) {
+	app.Action = func(c *cli.Context) error {
 		if len(c.Args()) < 1 {
 			cli.ShowAppHelp(c)
 			os.Exit(1)
@@ -93,6 +93,7 @@ func main() {
 			}
 		}
 		fmt.Println()
+		return nil
 	}
 
 	app.Run(os.Args)
