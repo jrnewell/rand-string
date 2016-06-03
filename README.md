@@ -4,6 +4,8 @@ Generates a cryptographically-secure random character string.
 
 ## Installation
 
+Requires Go version 1.6+ for support of the ``vendor`` directory.  Go version 1.5 supports the ``vendor`` directory as well, but the environment variable ``GO15VENDOREXPERIMENT=1`` needs to be set.
+
 ```shell
 go get github.com/jrnewell/rand-string
 ```
